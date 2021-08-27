@@ -42,8 +42,12 @@
         $idades = array(25,21,9999);
         $arrayLenght = count($nomes);
 
-        for($i = 0; $i < $arrayLenght; $i++)
+        for($i = 0; $i < $arrayLenght; $i++){
+            $somaIdades += $idades[$i];
             echo "Pessoa: $nomes[$i], idade:$idades[$i] <br>";
+        }
+
+        echo "Soma idades = $somaIdades";
     ?>
     <hr>
     <h3>6. Procure na internet um conversor de moeda. <br>Escreva um programa que
