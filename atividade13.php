@@ -177,8 +177,7 @@
                     foreach($linhas as $linha){
                         $i++;
                         echo $linha." ";
-                        if($i == 3) echo "<br>";
-                        if($i == 6) echo "<br>";
+                        if($i == 3 || $i == 6) echo "<br>";
                     }
                 }
                 echo '</div>';
