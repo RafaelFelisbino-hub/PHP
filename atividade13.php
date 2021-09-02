@@ -55,36 +55,53 @@
                     return $imc;
                 }
                 $pesoImc = fn_peso_imc($peso, $altura);
-                printf("Seu peso IMC = %.2f", $pesoImc);
+                printf("Seu peso IMC = %.2f<br>", $pesoImc);
+
+                function fn_peso_ideal_imc($pesoImc){
+                    if($pesoImc < 17)
+                        echo "Muito abaixo do peso";
+                    elseif($pesoImc >= 17 && $pesoImc < 18.50)
+                        echo "Abaixo do peso";
+                    elseif($pesoImc >= 18.50 && $pesoImc < 25)
+                        echo "Peso normal";
+                    elseif($pesoImc >= 25 && $pesoImc < 30)
+                        echo "Acima do peso";
+                    elseif($pesoImc >= 30 && $pesoImc < 35)
+                        echo "Obesidade 1";
+                    elseif($pesoImc >= 35 && $pesoImc < 40)
+                        echo "Obesidade 2 (Severa)";
+                    else
+                        echo "Obesidade 3 (Mórbida)";
+                }
+            
+                fn_peso_ideal_imc($pesoImc);
             }
         ?>
     </div>
     <div class="questoes">
         <h3>Função 2</h3>
-        <h4>Preencher a Função 1 para executar esta função</h4>
-        <h4>Qual faixa se encaixa seu peso IMC:</h4>
-        <?php
-            if(isset($_POST['pesoImc'],$_POST['alturaImc'])){
-            function fn_peso_ideal_imc($pesoImc){
-                if($pesoImc < 17)
-                    echo "Muito abaixo do peso";
-                elseif($pesoImc >= 17 && $pesoImc < 18.50)
-                    echo "Abaixo do peso";
-                elseif($pesoImc >= 18.50 && $pesoImc < 25)
-                    echo "Peso normal";
-                elseif($pesoImc >= 25 && $pesoImc < 30)
-                    echo "Acima do peso";
-                elseif($pesoImc >= 30 && $pesoImc < 35)
-                    echo "Obesidade 1";
-                elseif($pesoImc >= 35 && $pesoImc < 40)
-                    echo "Obesidade 2 (Severa)";
-                else
-                    echo "Obesidade 3 (Mórbida)";
+        <h4>Contar as vogais de uma palavra:</h4>
+        <form action="<?=$_SERVER['PHP_SELF'];?>#2" id="2" method="POST">
+            Palavra: <input type="text" name="palavra" id="palavraId"><br><br>
+            <button type="submit">Resultado</button><br><br>
+        </form>
+       <?php
+            if(isset($_POST['palavra'])){
+                $palavra = $_POST['palavra'];
+                $vogais = substr_count($palavra, 'a')
+                +substr_count($palavra, 'e')
+                +substr_count($palavra, 'i')
+                +substr_count($palavra, 'o')
+                +substr_count($palavra, 'u')
+                +substr_count($palavra, 'A')
+                +substr_count($palavra, 'E')
+                +substr_count($palavra, 'I')
+                +substr_count($palavra, 'O')
+                +substr_count($palavra, 'U');
+                
+                printf("A palavra %s possui %u vogais", $palavra, $vogais);
             }
-        
-            fn_peso_ideal_imc($pesoImc);
-        }
-        ?>
+       ?>
     </div>
     <div class="questoes">
         <h3>Função 3</h3>
