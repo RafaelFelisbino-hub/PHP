@@ -29,6 +29,11 @@
         .inputMatriz{
             width: 30px;
         }
+        .res{
+            margin-left: auto;
+            margin-right: auto;
+            width: 50px;
+        }
     </style>
 </head>
 <body>
@@ -166,6 +171,7 @@
                     )
                 );
                 $i = 0;
+                echo '<div class="res" style="border: 1px solid black;">';
                 foreach($matriz as $linhas){
                     foreach($linhas as $linha){
                         $i++;
@@ -179,6 +185,7 @@
                             echo $linha." ";
                     }
                 }
+                echo '</div>';
             }
         ?>
     </div>
