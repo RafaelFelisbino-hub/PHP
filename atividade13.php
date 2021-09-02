@@ -32,7 +32,8 @@
         .res{
             margin-left: auto;
             margin-right: auto;
-            width: 50px;
+            width: 80px;
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -171,7 +172,7 @@
                     )
                 );
                 $i = 0;
-                echo '<div class="res" style="border: 1px solid black;">';
+                echo '<div class="res">';
                 foreach($matriz as $linhas){
                     foreach($linhas as $linha){
                         $i++;
