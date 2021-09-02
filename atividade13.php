@@ -176,14 +176,9 @@
                 foreach($matriz as $linhas){
                     foreach($linhas as $linha){
                         $i++;
-                        if($linhas == $linha1)
-                            echo $linha." ";
+                        echo $linha." ";
                         if($i == 3) echo "<br>";
-                        if($linhas == $linha2)
-                            echo $linha." ";
                         if($i == 6) echo "<br>";
-                        if($linhas == $linha3)
-                            echo $linha." ";
                     }
                 }
                 echo '</div>';
