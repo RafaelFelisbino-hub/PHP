@@ -13,7 +13,7 @@
             <a href="index.php">
                 <li>Cadastrar</li>
             </a>
-            <a href="update.php">
+            <a href="atualizar.php">
                 <li>Atualizar</li>
             </a>
             <a href="delete.php">

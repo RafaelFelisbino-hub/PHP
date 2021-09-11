@@ -15,3 +15,7 @@ CREATE TABLE medicos (
     telefone_celular_medico VARCHAR(45) NOT NULL,
     telefone_secundario_medico VARCHAR(45) NOT NULL
 );
+
+select * from medicos;
+
+delete from medicos where id_medico = 5;
