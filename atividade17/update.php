@@ -2,16 +2,6 @@
 require_once 'conexao.php';
 
 try {
-    $nome;
-    $rua;
-    $numero;
-    $complemento;
-    $bairro;
-    $cep;
-    $email;
-    $telefoneFixo;
-    $celular;
-    $telefoneSecundario;
     $id_medico = $_GET['id_medico'];
     $select = $conn->query("SELECT * FROM medicos WHERE id_medico = '$id_medico';");
     $row = $select->fetch(PDO::FETCH_ASSOC);
