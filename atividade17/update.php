@@ -15,55 +15,17 @@ try {
     $id_medico = $_GET['id_medico'];
     $select = $conn->query("SELECT * FROM medicos WHERE id_medico = '$id_medico';");
     $row = $select->fetch(PDO::FETCH_ASSOC);
-        if(empty($_POST['nome']))
-            $nome = $row['nome_medico'];
-        else
-            $nome = $_POST['nome'];
 
-        if(empty($_POST['rua']))
-            $rua = $row['rua_medico'];
-        else
-            $rua = $_POST['rua'];
-        
-        if(empty($_POST['numero']))
-            $numero = $row['numero_medico'];
-        else
-            $numero = $_POST['numero'];
-
-        if(empty($_POST['complemento']))
-            $complemento = $row['complemento_medico'];
-        else
-            $complemento = $_POST['complemento'];
-        
-        if(empty($_POST['bairro']))
-            $bairro = $row['bairro_medico'];
-        else
-            $bairro = $_POST['bairro'];
-
-        if(empty($_POST['cep']))
-            $cep = $row['cep_medico'];
-        else
-            $cep = $_POST['cep'];
-
-        if(empty($_POST['email']))
-            $email = $row['email_medico'];
-        else
-            $email = $_POST['email'];
-
-        if(empty($_POST['telefoneFixo']))
-            $telefoneFixo = $row['telefone_fixo_medico'];
-        else
-            $telefoneFixo = $_POST['telefoneFixo'];
-        
-        if(empty($_POST['celular']))
-            $celular = $row['telefone_celular_medico'];
-        else
-            $celular = $_POST['celular'];
-
-        if(empty($_POST['telefoneSecundario']))
-            $telefoneSecundario = $row['telefone_secundario_medico'];
-        else
-            $telefoneSecundario = $_POST['telefoneSecundario'];
+    empty($_POST['nome']) ? $nome = $row['nome_medico'] : $nome = $_POST['nome'];  
+    empty($_POST['rua']) ? $rua = $row['rua_medico'] : $rua = $_POST['rua'];
+    empty($_POST['numero']) ? $numero = $row['numero_medico'] : $numero = $_POST['numero'];
+    empty($_POST['complemento']) ? $complemento = $row['complemento_medico'] : $complemento = $_POST['complemento'];
+    empty($_POST['bairro']) ? $bairro = $row['bairro_medico'] :  $bairro = $_POST['bairro'];
+    empty($_POST['cep']) ? $cep = $row['cep_medico'] : $cep = $_POST['cep'];
+    empty($_POST['email']) ? $email = $row['email_medico'] : $email = $_POST['email'];
+    empty($_POST['telefoneFixo']) ? $telefoneFixo = $row['telefone_fixo_medico'] : $telefoneFixo = $_POST['telefoneFixo'];
+    empty($_POST['celular']) ? $celular = $row['telefone_celular_medico'] : $celular = $_POST['celular'];
+    empty($_POST['telefoneSecundario']) ? $telefoneSecundario = $row['telefone_secundario_medico']: $telefoneSecundario = $_POST['telefoneSecundario'];
 
     $update = $conn->prepare("UPDATE medicos SET nome_medico = :nome, rua_medico = :rua, numero_medico =:numero,
     complemento_medico = :complemento, bairro_medico = :bairro, cep_medico = :cep, email_medico = :email,
