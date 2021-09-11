@@ -30,37 +30,37 @@ try {
         else
             $numero = $_POST['numero'];
 
-        if(isset($_POST['complemento']))
+        if(empty($_POST['complemento']))
             $complemento = $row['complemento_medico'];
         else
             $complemento = $_POST['complemento'];
         
-        if(isset($_POST['bairro']))
+        if(empty($_POST['bairro']))
             $bairro = $row['bairro_medico'];
         else
             $bairro = $_POST['bairro'];
 
-        if(isset($_POST['cep']))
+        if(empty($_POST['cep']))
             $cep = $row['cep_medico'];
         else
             $cep = $_POST['cep'];
 
-        if(isset($_POST['email']))
+        if(empty($_POST['email']))
             $email = $row['email_medico'];
         else
             $email = $_POST['email'];
 
-        if(isset($_POST['telefoneFixo']))
+        if(empty($_POST['telefoneFixo']))
             $telefoneFixo = $row['telefone_fixo_medico'];
         else
             $telefoneFixo = $_POST['telefoneFixo'];
         
-        if(isset($_POST['celular']))
+        if(empty($_POST['celular']))
             $celular = $row['telefone_celular_medico'];
         else
             $celular = $_POST['celular'];
 
-        if(isset($_POST['telefoneSecundario']))
+        if(empty($_POST['telefoneSecundario']))
             $telefoneSecundario = $row['telefone_secundario_medico'];
         else
             $telefoneSecundario = $_POST['telefoneSecundario'];
