@@ -18,24 +18,27 @@
             </a> 
         </ul>
     </nav>
+    <?php
+        $id_medico = $_GET['id_medico']; 
+    ?>
     <div class="container">
-        <h3 style="margin-bottom: 20px;">Cadastrar médico</h3>
+        <h3 style="margin-bottom: 20px;">Atualizar médico</h3>
         <div class="formPaciente">
-            <form action="cadastro.php" method="POST">
+            <form action="<?php echo 'update.php?id_medico='.$id_medico ; ?>" enctype="multipart/form-data" method="POST">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" required>
+                <input type="text" name="nome" id="nome">
                 <label for="rua">Rua:</label>
-                <input type="text" name="rua" id="rua" required>
+                <input type="text" name="rua" id="rua">
                 <label for="numero">Número:</label>
-                <input type="text" name="numero" id="numero" required>
+                <input type="text" name="numero" id="numero">
                 <label for="complemento">Complemento</label>
                 <input type="text" name="complemento" id="complemento">
                 <label for="bairro">Bairro:</label>
-                <input type="text" name="bairro" id="bairro" required>
+                <input type="text" name="bairro" id="bairro">
                 <label for="cep">Cep:</label>
-                <input type="text" name="cep" id="cep" required>
+                <input type="text" name="cep" id="cep">
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email">
                 <label for="telefoneFixo">Telefone fixo:</label>
                 <input type="text" name="telefoneFixo" id="telefoneFixo">
                 <label for="celular">Celular:</label>
@@ -43,7 +46,7 @@
                 <label for="telefoneSecundario">Telefone secundário:</label>
                 <input type="text" name="telefoneSecundario" id="telefoneSecundario">
                 <div style="text-align: center;">
-                    <button type="submit" class="btnCadastro">Cadastrar</button>
+                    <button type="submit" class="btnCadastro">Atualizar</button>
                 </div>
             </form>
         </div>

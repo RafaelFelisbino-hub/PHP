@@ -13,13 +13,7 @@
             <a href="index.php">
                 <li>Cadastrar</li>
             </a>
-            <a href="atualizar.php">
-                <li>Atualizar</li>
-            </a>
-            <a href="delete.php">
-                <li>Deletar</li>
-            </a>
-            <a href="select.php">
+            <a href="consultar.php">
                 <li>Consultar</li>
             </a> 
         </ul>
@@ -58,7 +52,7 @@
                         echo "<td>".$valor['telefone_fixo_medico']."</td>";
                         echo "<td>".$valor['telefone_celular_medico']."</td>";
                         echo "<td>".$valor['telefone_secundario_medico']."</td>";
-                        echo "<td><a href=''>Atualizar</a></td>";
+                        echo "<td><a href='atualizar.php?id_medico=".$valor['id_medico']."'>Atualizar</a></td>";
                         echo "<td><a href='deletar.php?id_medico=".$valor['id_medico']."'>Deletar</a></td>";
                         echo "</tr>";
                     }
