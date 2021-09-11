@@ -67,7 +67,8 @@ try {
 
     $update = $conn->prepare("UPDATE medicos SET nome_medico = :nome, rua_medico = :rua, numero_medico =:numero,
     complemento_medico = :complemento, bairro_medico = :bairro, cep_medico = :cep, email_medico = :email,
-    telefone_fixo_medico = :telefoneFixo, telefone_celular_medico = :celular, telefone_secundario_medico = :telefoneSecundario;");
+    telefone_fixo_medico = :telefoneFixo, telefone_celular_medico = :celular, telefone_secundario_medico = :telefoneSecundario
+    WHERE id_medico = :id;");
 
     $update->bindParam(':nome', $nome);
     $update->bindParam(':rua', $rua);
@@ -79,6 +80,7 @@ try {
     $update->bindParam(':telefoneFixo', $telefoneFixo);
     $update->bindParam(':celular', $celular);
     $update->bindParam(':telefoneSecundario', $telefoneSecundario);
+    $update->bindParam(':id', $id_medico);
 
     $update->execute();
     
