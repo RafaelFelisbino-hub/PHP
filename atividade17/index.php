@@ -19,7 +19,7 @@
             <a href="delete.php">
                 <li>Deletar</li>
             </a>
-            <a href="select.php">
+            <a href="consultar.php">
                 <li>Consultar</li>
             </a> 
         </ul>
