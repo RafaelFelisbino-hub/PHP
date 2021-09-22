@@ -17,13 +17,6 @@
             return $this->$atributo;
         }
 
-        public function setProduto($numero, $descricao, $quantidade, $valor){
-            $this->numero = $numero;
-            $this->descricao = $descricao;
-            $this->quantidade = $quantidade;
-            $this->valor = $valor;
-        }
-
         public function __destruct(){
             echo '<div class="row" style="margin-top: 1rem;">';
             echo "Conexão encerrada";
