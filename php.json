@@ -24,7 +24,7 @@
 	"public function set":{
 		"prefix": "pfs",
 		"body":[
-			"public function $1(){\n\t$$this->$2 = $$2;\n}"
+			"public function set$1($$2){\n\t$$this->$3 = $$2;\n}"
 		],
 		"description": "public function com this"
 	},
@@ -32,9 +32,17 @@
 	"public function get":{
 		"prefix": "pfg",
 		"body":[
-			"public function $1(){\n\treturn $$this->$2;\n}"
+			"public function get$1(){\n\treturn $$this->$2;\n}"
 		],
 		"description": "public function com return"
+	},
+
+	"conexao PDO":{
+		"prefix": "pdo",
+		"body":[
+			"new PDO('mysql:hostname=localhost;dbname=$1','root','');"
+		],
+		"description": "instância de PDO"
 	}
 
 }
